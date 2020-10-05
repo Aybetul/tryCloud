@@ -3,7 +3,6 @@ Feature: files tab test
   Background: user is on the landing page
     Given user is on login page
     When user enters username and password
-
   Scenario: Verify page title
     Given user is on files tab
     Then user verifies that title is "Files - Trycloud"
@@ -19,6 +18,8 @@ Feature: files tab test
       | Deleted files|
     Then user verifies "Settings" tab displayed
     # We skipped Shares sub tabs but we could write test steps for it too
+
+
 
   Scenario: Verify that file is uploaded
     Given user clicks on plus sign
