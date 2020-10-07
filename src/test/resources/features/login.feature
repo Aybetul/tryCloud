@@ -7,7 +7,7 @@ Feature: login as a user
     Then user should log in
     And user should log out
 
-=======
+
   Scenario: login as a valid user
     Given user is on login page
     When user enters username and password
@@ -33,4 +33,4 @@ Feature: login as a user
       |          | 1234567     |
       | 1234567  |             |
       |          |             |
->>>>>>> 43374525e733794a40eec92cc16afd7e1eaef4f8
+

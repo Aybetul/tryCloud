@@ -11,12 +11,12 @@ Feature: files tab test
   Scenario: Verify column names
     Given user is on files tab
     Then user verifies that column names are displayed
-      | All files    |
-      | Recent       |
-      | Favorites    |
-      | Shares       |
-      | Tags         |
-      | Deleted files|
+      | All files     |
+      | Recent        |
+      | Favorites     |
+      | Shares        |
+      | Tags          |
+      | Deleted files |
     Then user verifies "Settings" tab displayed
     # We skipped Shares sub tabs but we could write test steps for it too
 
@@ -27,34 +27,54 @@ Feature: files tab test
     And user clicks on "Recent" tab
     Then user verifies that file is there
 
-    Scenario: Verify that new folder is created
-      Given user clicks on plus sign
-      And clicks on "New Folder"
-      Then user names the folder
-      And user clicks the arrow
-      Then user clicks on "Recent" tab
-      Then user verifies that new folder is created
+  Scenario: Verify that new folder is created
+    Given user clicks on plus sign
+    And clicks on "New Folder"
+    Then user names the folder
+    And user clicks the arrow
+    Then user clicks on "Recent" tab
+    Then user verifies that new folder is created
 
 
-      Scenario: Verify that new text file is created
-        Given user clicks on "New text file"
-        When user names the file
-        And user clicks the arrow
-        And user closes the file
-        Then user clicks on "Recent" tab
-        Then user verifies that new text file is created
+  Scenario: Verify that new text file is created
+    Given user clicks on "New text file"
+    When user names the file
+    And user clicks the arrow
+    And user closes the file
+    Then user clicks on "Recent" tab
+    Then user verifies that new text file is created
 
 
-        Scenario: Verify that user can choose an item as Favorites
+  Scenario: Verify that user can choose an item as Favorites
 
-          Given user is on "All files" page
-          When user clicks on more icon on an item
-          And user clicks on "Add to favorites"
-          Then user clicks on "Favorites" tab
-          Then user verifies that the item is added to Favorites
+    Given user is on "All files" page
+    When user clicks on more icon on an item
+    And user clicks on "Add to favorites"
+    Then user clicks on "Favorites" tab
+    Then user verifies that the item is added to Favorites
 
 
-          Scenario:
+  Scenario Outline: Verify that user can share with others
+    Given user is on "All files" page
+    Then user verifies that number of items are same as "<Tab>"
+    Examples:
+      | Tab                |
+      | Shared with others |
+      | Shared by link     |
+
+
+  Scenario: Verify that user can add tag
+
+    Given user is on "All files" page
+    When user clicks on more icon on an item
+    And user clicks on "Details"
+    And user clicks on Tags and user creates a new tag name
+    Then user verifies that item is under the Tags tab
+
+
+
+
+
 
 
 
