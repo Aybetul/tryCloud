@@ -10,19 +10,19 @@ Feature: gallery tab test
     When user enters username and password
 
   Scenario: adding new picture to gallery
-    Given user clicks on gallery tab
+    Given user clicks on "Gallery" tab
     And user clicks on plus sign
     And clicks on "Upload"
     When user uploads picture
     Then user verifies that picture is there
 
   Scenario: ascending and descending order
-    Given user clicks on gallery tab
+    Given user clicks on "Gallery" tab
     And user clicks on AZ icon
     Then user verifies that pictures are ordered by name
 
   Scenario: pictures are ordered based on date and time
-    Given user clicks on gallery tab
+    Given user clicks on "Gallery" tab
     And user clicks on calendar icon
     Then user verifies that pictures are ordered by date
 
