@@ -18,6 +18,7 @@ Feature: files tab test
       | Tags          |
       | Deleted files |
     Then user verifies "Settings" tab displayed
+
     # We skipped Shares sub tabs but we could write test steps for it too
 
   Scenario: Verify that file is uploaded
