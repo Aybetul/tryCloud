@@ -1,8 +1,10 @@
 Feature: Calender page
+
   Background: user is on the landing page
     Given user is on login page
     When user enters username and password
     And user clicks on "Calender" tab
+
   Scenario: user can create an event
     Then user clicks on "Month" button
     Then user clicks on New Calendar button
