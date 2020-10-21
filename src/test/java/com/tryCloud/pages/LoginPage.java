@@ -3,7 +3,7 @@ package com.tryCloud.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class LoginPage  extends BasePage{
+public class LoginPage extends PageBase{
     @FindBy(id = "user")
     private WebElement username;
 
@@ -21,15 +21,5 @@ public class LoginPage  extends BasePage{
 
     @FindBy(xpath = "//li[@data-id='logout']//a")
     private WebElement log_out;
-
-
-
-
-
-
-
-
-
-
 
 }
