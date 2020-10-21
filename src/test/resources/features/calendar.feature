@@ -1,7 +1,5 @@
 Feature: Calendar page
- #bug->today button doesn't work
-
-  
+ #bug->today button doesn't wor
   Background: user is on the landing page
     Given user is on login page
     When user enters username and password
