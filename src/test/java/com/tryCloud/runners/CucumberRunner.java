@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         glue="com/tryCloud/step_definitions",
         features = "src/test/resources/features",
         // dryRun=true,
-        dryRun=false,
+        dryRun=true,
         strict =true,
         tags="",
         plugin= {"html:target/default-report",
